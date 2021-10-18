@@ -8,8 +8,27 @@
     <title>Simple AJAX</title>
 </head>
 <body>
-    
+    <button onclick=showCountries()>Show Countries</button>
 
-    <script src="assets/js/script.js"></script>
+    <script>
+        function showCountries() {
+            var xhr = new XMLHttpRequest()
+
+            xhr.open('GET', 'https://restcountries.eu/rest/v2/all', true)
+
+            xhr.onload = function() {
+                if (xhr.status === 200){
+                    //WEBSITE is taking longer than normal to bring back response 10-18-21
+                    console.log("success")
+           }
+       }
+
+            xhr.send()
+
+
+        }
+    
+    
+    </script>
 </body>
 </html>
